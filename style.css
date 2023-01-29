@@ -80,6 +80,7 @@ h6 {
 body {
   background-image: url(./images/bg-header-mobile.png);
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main {
@@ -201,7 +202,7 @@ ul {
 }
 
 .company-logo {
-  width: 8rem;
+  max-width: 8rem;
 }
 
 footer {
@@ -214,13 +215,14 @@ footer {
 }
 
 .img-main-small {
-  margin-block: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 2.75rem;
   width: 3.4rem;
 }
 
 .footer__links {
   font-size: 1.125rem;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 .footer__links > * + * {
@@ -228,7 +230,114 @@ footer {
 }
 
 .footer__logos {
-  margin-top: 3rem;
+  margin-block: 3rem;
   display: flex;
   gap: 2.5rem;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url(./images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  main {
+    --fs-base: 1.125rem;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    max-width: 60ch;
+  }
+
+  .btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    padding-inline: 2rem;
+  }
+
+  .comp-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .features {
+    padding-left: 6rem;
+    text-align: left;
+    max-width: 38ch;
+  }
+  .features p,
+  .tool p {
+    font-size: 1rem;
+  }
+
+  .tools {
+    display: flex;
+    align-items: baseline;
+    gap: 3rem;
+  }
+  .tool {
+    max-width: 30ch;
+  }
+
+  footer.flex-column {
+    padding-bottom: 1.5rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .img-main-small-container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer__links {
+    width: 50%;
+    display: grid;
+    align-items: flex-end;
+    justify-items: flex-start;
+    column-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, 100px);
+    padding-right: 11%;
+  }
+
+  .footer__links > li {
+    width: max-content;
+  }
+
+  .footer__logos {
+    width: 25%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 950px) {
+  .companies {
+    margin-top: 10rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  .company-logo {
+    max-width: 10rem;
+  }
+  h2:last-of-type {
+    margin-top: 9rem;
+  }
 }
