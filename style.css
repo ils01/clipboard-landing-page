@@ -241,11 +241,6 @@ footer {
   cursor: pointer;
 }
 
-.footer__logos img:hover {
-  fill: var(--clr-primary-cyan);
-  border: 1px solid red;
-}
-
 .footer__links > * + * {
   margin-top: 1.5rem;
 }
@@ -343,9 +338,9 @@ footer {
   }
 
   .footer__logos {
-    align-items: center;
     width: 25%;
     justify-content: center;
+    align-items: center;
   }
 }
 
